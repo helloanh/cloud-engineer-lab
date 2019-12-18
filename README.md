@@ -4,4 +4,6 @@
 
 1. [Overview ](Azure/overview.md)
 2. [Create and configure virtual machines](Azure/virtual-machines.md)
-3. [Powershell Azure Module](Azure/powershell-in-azure.md)
+3. [Subscription and resources](Azure/subscription-resources.md)
+4. [Powershell Azure Module](Azure/powershell-in-azure.md)
+

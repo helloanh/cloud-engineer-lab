@@ -7,7 +7,7 @@ Companies can create multiple subscriptions.  There are limits (max number of st
 
 Multiple subscriptsion can be organized into management group.  An example for managing 10 subscriptions, as represented by the yellow keys:  
 
-![sub-tree](Azure/images/subscription-tree.png)
+![sub-tree](images/subscription-tree.png)  
 
 
 ### Subscription Options  
@@ -27,7 +27,7 @@ You can create additional subscription based on Azure Blueprints, a template for
 - the subscription is how the person get charged. many accounts can use the same subscription  
 
 
-![sub-resource](Azure/images/subscription-resources.png)
+![sub-resource](images/subscription-resources.png) 
 
 - subscriptions contain resources   
 - resource groups container isolated resources  

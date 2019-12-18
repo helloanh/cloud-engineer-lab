@@ -43,6 +43,6 @@ If you use availability zones--such as 3 zones in one region, remember that load
 
 - set scaling rules like CPU threshold to increase or decrease the machine number  
 
-![vm-autoscale](Azure/images/vm-autoscale.png)  
+![vm-autoscale](images/vm-autoscale.png)  
 
 - also have load balancing options  

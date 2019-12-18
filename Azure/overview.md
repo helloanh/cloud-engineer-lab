@@ -57,7 +57,7 @@ az container create --resource-group WebResourcEGroup --name demo-iis --os-type 
 1. economy of scale
 	- it's cheaper for MS to run the server than you going out to buy them yoruself  
 
-	**cheaper (per server)**   
+	-cheaper (per server):      
 		- hardware about 30% cost when buy in bulk  
 		- electricity 15-20% cost of runnign a server    
 		- labor costs   

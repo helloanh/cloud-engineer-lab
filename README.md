@@ -1,5 +1,7 @@
-# cloud engineer lab and notes
+# Cloud Engineer Lab and Notes
 
-## Microsoft Azure az-300 architecture technologies exam prep 2010
+## Microsoft Azure AZ-300 architecture technologies exam prep 2010
 
-[Overview.md](Azure/overview.md)
+1. [Overview ](Azure/overview.md)
+2. [Create and configure virtual machines](Azure/virtual-machines.md)
+3. [Powershell Azure Module](Azure/powershell-in-azure.md)

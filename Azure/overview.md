@@ -102,7 +102,10 @@ az container create --resource-group WebResourcEGroup --name demo-iis --os-type 
 	- how long are your down time for? how long is acceptable 
 	- how much data do you lose?  
 
-## Cloud Concepts: Final Thoughts 
+	Capital Expenditure (CapEx)  - expense business incurs to create a benefit in the future   
+
+	Operational expenditure (OpEx) - day to day cost to run a business. 
+
 
 
 

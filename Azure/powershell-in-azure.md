@@ -83,3 +83,30 @@ Stop-AzVM -ResourceGroupName "testWebRG" -Name "testNewVm"
 # to start a vm
 Start-AzVM -ResourceGroupName "testWebRG" -Name "testNewVm"
 ```
+## Encrypting VM
+[Microsoft Docs on VM Encrypt Disk](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/encrypt-disks)   
+
+1. First create a key vault in Azure.  Search for resource "key vault."  Make sure the key vault is in the same region as your VM you want to encrypt.    
+2. Go to Settings >> Keys >> Generate/Import and create an RSA with RSA key size 2048.  
+3. Launch a VM in the same region as the key vault.  
+4. Start Azure Powershell >_ and input these commands:  
+
+```powershell
+# replace the vault name and resource group name from your own name
+$keyVault = Get-AzKeyVault -VaultName "web-manage" -ResourceGroupName "webManageRG";
+
+$diskEncryptionKeyVaultUrl = $keyVault.VaultUri;
+$keyVaultResourceId = $keyVault.ResourceId;
+
+$keyEncryptionKeyUrl = (Get-AzKeyVaultKey -VaultName "web-manage" -Name "az-disk-encryption").Key.kid;
+
+$rgName = "webResourceGroup";
+Set-AzVMDiskEncryptionExtension -ResourceGroupName $rgName `
+    -VMName "anotherTestVM" `
+    -DiskEncryptionKeyVaultUrl $diskEncryptionKeyVaultUrl `
+    -DiskEncryptionKeyVaultId $keyVaultResourceId `
+    -KeyEncryptionKeyUrl $keyEncryptionKeyUrl `
+    -KeyEncryptionKeyVaultId $keyVaultResourceId
+```
+
+To check, go to VM >> Settings >> Disks and view the Encryption value.  It should be "Enabled."  

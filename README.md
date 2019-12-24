@@ -7,3 +7,5 @@
 3. [Subscription and resources](Azure/subscription-resources.md)
 4. [Powershell Azure Module](Azure/powershell-in-azure.md)
 5. [Automate Deployment of Virtual Machines](Azure/automate-deployment-vm.md)
+6. [Analyze Resource Utilization and Consumption](Azure/analyze-resource-util-and-consumption.md)  
+7.

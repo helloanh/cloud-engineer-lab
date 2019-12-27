@@ -8,4 +8,5 @@
 4. [Powershell Azure Module](Azure/powershell-in-azure.md)
 5. [Automate Deployment of Virtual Machines](Azure/automate-deployment-vm.md)
 6. [Analyze Resource Utilization and Consumption](Azure/analyze-resource-util-and-consumption.md)  
-7.
+7. [Create Storage Account](Azure/storage-account.md)  
+8. [Virtual Network](Azure/virtual-network.md)

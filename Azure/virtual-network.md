@@ -60,10 +60,31 @@ Options within Azure:
 		![active-active](images/active-active.png)  
    
 3. ExpressRoute  
-	- private connection btw your connection and Azure running with ISP, work with a comms provider to set up
+	- private connection btw your connection and Azure running with IXP (internet exchange provider), work with a comms provider to set up
 	- extremely fast and also expensive  
 	- depending on service to connect to, you use Azure Private Peering for Azure services and Microsoft Peering for Microsoft Cloud 
 	![expressroute](images/expressroute.png)
+
 4. ExpressRoute Direct  
+	**relatively new service**  
+	- connect directly to Microsoft to connect to their global Microsft backbone  
+	- currently has 100+ edge locations  
+	- even higher speeds than ISP/IXP (internet exchange provider)  
+	- 10 Gbps and 100 Gbps  
+	- multiple virtual circuits on one connection, you can break down the 100Gbps into multiple 10Gbps seconds circuits  
+	- 100Gbps in one cirtuit setup is good for massive date ingestion  
+	- **must** have internal network that supports those speeds  - you need hardward to connect and get up to 100Gbps speed  
+
+### Virtual WAN  
+
+Question: how to connect two branch offices to each other using Azure? 
+
+- Using Azure as site-to-site VPN or an exprss route VPN.   
+
+Question: What about interoffice connectivity through Azure?  
+
+- Using Azure Virtual WAN  
+
+
 
 

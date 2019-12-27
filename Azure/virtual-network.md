@@ -22,7 +22,7 @@ Two types of peering:
 1. VNET Peering within the same region: 0.01 per GB for inbound and outbound transfer.  
 2. Global VNET Peering:
 		- inbound and outbound have different costs    
-		
+crai
 ![peering](images/peering.png)
 
 When we use VN Gateway to connect to a network, we are using the same tech to connect.  From your corporate on-premise network into Azure, use VN Gateway from the Azure end to connect to the physical gateway from your on-premise network.   
@@ -30,6 +30,40 @@ When we use VN Gateway to connect to a network, we are using the same tech to co
 ForVPN Gateway Type (VNET-to-VNET connection) - this is charged based on time provisioned and available.    
 
 ![vpn-gateway](images/vpn-gateway.png)  
+ On each VN network, create a virtual gateway subnet.  Provision a subnet for the gateway.  Create a vpn gateway and it will create a new subnet.  
 
+### Virtual Private Networks (VPN)  
+
+VPN is a connection btw your computer and a virtual network within Azure or a whole network of computers and a virtual network with an Azure VPN.
+
+- private, meaning end-to-end encryption of traffic  
+- does travel across internet, but encrypted  
+
+Options within Azure:  
+1. Point to Site (P2S) VPN  
+	[your computer] with VPN client ---> [Azure Virtual Network] with GatewaySubnet with a Virtual NetworkGateway    
+	- common for work at home, telecommuniting     
+	- not persistent, inconvenient   
+
+	![p2s](images/p2s.png) 
+
+2. Site to Site (S2S) VPN 
+	![s2s](images/s2s.png) 
+
+	- connect an entire office to Azure  
+	- you need a physical VPN Gatewway Device on your office network 
+	- **Additional features**: 
+		supports redudancy - by default, Azure sets up double connection  
+		multiple gateways - many gateways to connect to a single Azure VN Gateway
+		active-active  -single gateway device connect to multiple Azure VN Gateway 
+
+		![active-active](images/active-active.png)  
+   
+3. ExpressRoute  
+	- private connection btw your connection and Azure running with ISP, work with a comms provider to set up
+	- extremely fast and also expensive  
+	- depending on service to connect to, you use Azure Private Peering for Azure services and Microsoft Peering for Microsoft Cloud 
+	![expressroute](images/expressroute.png)
+4. ExpressRoute Direct  
 
 

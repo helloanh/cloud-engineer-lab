@@ -10,4 +10,26 @@
 ![backend subnet](images/backend-subnet.png) 
 
 ## VNET Peering
+Peering is when you connect two virtual networks together. This means all the resources in one virtual network can access the resources in another network and vice versa.
+
+Azure supports the following types of peering:    
+
+**Virtual network peering**: Connect virtual networks within the same Azure region.  
+**Global virtual network peering**: Connecting virtual networks across Azure regions.      
+### To Add Peering 
+
+Two types of peering:  
+1. VNET Peering within the same region: 0.01 per GB for inbound and outbound transfer.  
+2. Global VNET Peering:
+		- inbound and outbound have different costs    
+		
+![peering](images/peering.png)
+
+When we use VN Gateway to connect to a network, we are using the same tech to connect.  From your corporate on-premise network into Azure, use VN Gateway from the Azure end to connect to the physical gateway from your on-premise network.   
+
+ForVPN Gateway Type (VNET-to-VNET connection) - this is charged based on time provisioned and available.    
+
+![vpn-gateway](images/vpn-gateway.png)  
+
+
 
